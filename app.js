@@ -11,6 +11,7 @@ var app = new Vue({
     },
     created: function () {
         this.messages.push("Welcome to baudosft chat!")
+        this.messages.push("Please enable sound to chat to each other");
         Chirp({ 
             key: '1b19eAdBb5DcdbfcA4db0727b',
             onReceived: (data) => {

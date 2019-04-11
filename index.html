@@ -25,7 +25,9 @@
             </p>
         </div>
 
-        <input class="input" id="txtInput" v-model="txtInput" @keyup.enter="send">
+        <input class="input" id="txtInput" v-model="txtInput"
+            maxlength="33"
+            @keyup.enter="send">
     </div>
 
 

@@ -25,10 +25,14 @@ body{
     padding:5px;
 }
 
+html, body, .screen{
+    max-height:100%;
+}
+
 .screen{
     position: relative;
-    height: 500px;
-    margin-top:200px;
+    min-height: 500px;
+    margin-top:50px;
     background-color:black;
     border:1px solid #eee;
     padding:5px;
