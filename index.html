@@ -12,39 +12,63 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link href="style.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
 <body>
 
-    <div class="container" id="app">
 
 
-        <img class="logo" src="baudsoft.png">
+    <div class="container" id="appkaart">
+        <div>
+            <img class="logobingo" src="images/baudbingologo.png">
+        </div>
 
+        <table>
+            <tr>
+                <th colspan="3"></th>
+            </tr>
 
-        <div class="output">
-            <p v-for="m in messages" v-bind:class="m.role">
-                {{m.role}} : {{m.value}}
-            </p>
-            <p v-if="status" class="admin">
-                {{status}} message... please wait
+            <tr>
+                <td id="square0">&nbsp;</td>
+                <td id="square1">&nbsp;</td>
+                <td id="square2">&nbsp;</td>
+
+            </tr>
+            <tr>
+                <td id="square3">&nbsp;</td>
+
+                <td id=""> <img class="logosmall" src="images/baudbingomid.png"></td>
+
+                <td id="square4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="square5">&nbsp;</td>
+                <td id="square6">&nbsp;</td>
+                <td id="square7">&nbsp;</td>
+
+            </tr>
+
+        </table>
+
+        <div class="outputtext">
+            <p class="bingonumber animated infinite bounceIn delay-4s">
+                {{message}}
             </p>
         </div>
-        <input class="input"  id="txtInput" 
-            v-model="txtInput" maxlength="33" @keyup.enter="send">
-
+        
     </div>
 
 
 
+    <script src="https://public.chirp.io/wasm/3.0.3/chirp-connect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="appkaart.js"></script>
+    <script src="bingo.js"></script>
 
 </body>
 
 </html>
-
-<script src="https://public.chirp.io/wasm/3.0.3/chirp-connect.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="app.js"></script>

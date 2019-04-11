@@ -17,8 +17,41 @@ body{
 .logo{
     margin:10px;
     margin-left:auto; margin-right: auto;
-    height: 160px;
+    height: 140px;
 }
+
+
+.logosmall{
+    margin:10px;
+    margin-left:auto; margin-right: auto;
+    height: 60px;
+}
+
+.bingonumber {
+    font-size: 130px;
+    margin-left: 11px;
+    color: #ff7100;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.logobingo {
+    margin-top: 20px;
+}
+table{
+    margin-left: auto;
+    margin-right:auto;
+}
+table td {
+    width: 85px;
+    height: 85px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+}
+
+#free, .pickedBG {
+    background-color: #ff7100;
+    }
+
 
 html, body, .container{
     height:100%;
@@ -27,6 +60,7 @@ html, body, .container{
 .container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 p.admin{
@@ -39,7 +73,7 @@ p.admin{
 }
 
 .input{
-    height: 50px;
+    height: 100px;
 }
 
 .output, input{
@@ -57,4 +91,19 @@ input:disabled{
 
 .receiving{
     color:white;
+}
+
+nav{
+    display: flex;
+    flex-direction: row; 
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration: underline;
+}
+
+.outputtext{
+    min-height: 140px;
 }
