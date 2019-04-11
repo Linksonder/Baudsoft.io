@@ -30,7 +30,8 @@ body{
 
 
 table td {
-    width: 30px;
+    width: 100px;
+    height: 100px;
 }
 
 #free, .pickedBG {
