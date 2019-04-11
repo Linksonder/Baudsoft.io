@@ -41,7 +41,7 @@ var app = new Vue({
             this.status = null;
             this.messages.push({ role: "me", value: msg});
             var container = this.$el.querySelector(".output");
-            container.scrollTop = container.scrollHeight + 100;
+            container.scrollTop = container.height;
         },
     }
 })
