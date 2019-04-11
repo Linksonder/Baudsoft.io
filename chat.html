@@ -19,6 +19,10 @@
 
 <body>
 
+    <nav>
+        <a href="/chat">Go to bingo</a>
+    </nav>
+
     <div class="container" id="app">
 
 
@@ -33,8 +37,7 @@
                 {{status}} message... please wait
             </p>
         </div>
-        <input class="input"  id="txtInput" 
-            v-model="txtInput" maxlength="33" @keyup.enter="send">
+        <input class="input" id="txtInput" v-model="txtInput" maxlength="33" @keyup.enter="send">
 
     </div>
 
