@@ -10,8 +10,9 @@ var app = new Vue({
         txtInput: ""
     },
     created: function () {
-        this.messages.push("Welcome to baudosft chat!")
-        this.messages.push("Please enable sound to chat to each other");
+        this.messages.push({ role: 'admin', value: "Welcome to baudosft chat!"})
+        this.messages.push({ role: 'admin', value: "Please enable sound to chat to each other"})
+
         Chirp({ 
             key: '1b19eAdBb5DcdbfcA4db0727b',
             onReceived: (data) => {
@@ -28,7 +29,7 @@ var app = new Vue({
     },
     methods: {
         send: function () {
-            this.messages.push("me: " + this.txtInput);
+            this.messages.push({ role: "me", value: this.txtInput});
             this.sdk.send(this.txtInput);
             this.txtInput = "";
 

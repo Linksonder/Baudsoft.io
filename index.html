@@ -17,11 +17,14 @@
 
 <body>
 
+    <img class="logo" src="baudsoft.png">
+
+
     <div class="screen container" id="app">
 
         <div class="output">
-            <p v-for="m in messages">
-                {{m}}
+            <p v-for="m in messages" v-bind:class="m.role">
+                {{m.role}} : {{m.value}}
             </p>
         </div>
 
