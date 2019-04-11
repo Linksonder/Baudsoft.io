@@ -40,6 +40,8 @@ body{
 table td {
     width: 100px;
     height: 100px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
 }
 
 #free, .pickedBG {

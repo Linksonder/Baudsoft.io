@@ -6,7 +6,7 @@ const decode = s => typeof TextDecoder === 'undefined' ? toAscii(s) : new TextDe
 var app = new Vue({
     el: '#appkaart',
     data: {
-        message: '50',
+        message: '',
         
     },
     created: function () {
