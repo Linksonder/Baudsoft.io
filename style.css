@@ -58,3 +58,14 @@ input:disabled{
 .receiving{
     color:white;
 }
+
+nav{
+    display: flex;
+    flex-direction: row; 
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration: underline;
+}

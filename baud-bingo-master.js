@@ -46,7 +46,7 @@ var app = new Vue({
             this.numbers = [0];
         },
         next: function () {
-            if(this.numbers.length > max)
+            if(this.numbers.length > 40)
             {
                 return this.message.unshift({ role: "admin", value: "Game over!"});
             }
