@@ -17,7 +17,7 @@ body{
 .logo{
     margin:10px;
     margin-left:auto; margin-right: auto;
-    height: 160px;
+    height: 140px;
 }
 
 
@@ -37,11 +37,15 @@ body{
 .logobingo {
     margin-top: 20px;
 }
+table{
+    margin-left: auto;
+    margin-right:auto;
+}
 table td {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #free, .pickedBG {
