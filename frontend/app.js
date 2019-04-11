@@ -1,45 +1,36 @@
+const { Chirp, toAscii} = ChirpConnectSDK;
+
+const encode = s => typeof TextEncoder === 'undefined' ? s : new TextEncoder('utf-8').encode(s)
+const decode = s => typeof TextDecoder === 'undefined' ? toAscii(s) : new TextDecoder('utf-8').decode(s)
+
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Starting up...',
-        records: [],
-        audioChunks: []
+        messages: [],
+        txtInput: ""
     },
     created: function () {
-        this.message = "loading data..."
-        navigator.mediaDevices.getUserMedia({ audio: true })
-            .then(stream => {
-                this.mediaRecorder = new MediaRecorder(stream);
-
-                //
-                this.mediaRecorder.addEventListener("dataavailable", event => {
-                    this.audioChunks.push(event.data);
-                });
-
-                this.mediaRecorder.addEventListener("stop", () => {
-                    const audioBlob = new Blob(this.audioChunks);
-                    const audioUrl = URL.createObjectURL(audioBlob);
-                    const audio = new Audio(audioUrl);
-                    this.records.push(audio);
-                    this.audioChunks = [];
-                    audio.play();
-                })
-            });
+        this.messages.push("Welcome to baudosft chat!")
+        Chirp({ 
+            key: '1b19eAdBb5DcdbfcA4db0727b',
+            onReceived: (data) => {
+                this.messages.push(decode(data))
+                //app.$broadcast('incoming', data);
+            }
+        }).then(sdk => {
+            this.sdk = sdk;
+          }).catch(console.error)          
+    },
+    receive: function(){
+       
+        this.message.push("other: " + data);
     },
     methods: {
-        record: function () {
-            this.message = "recording..."
-            this.mediaRecorder.start();
-        },
-        stop: function () {
-            this.message = "done recording!"
-            this.mediaRecorder.stop();
-        },
-        playback: function () {
+        send: function () {
+            this.messages.push("me: " + this.txtInput);
+            this.sdk.send(this.txtInput);
+            this.txtInput = "";
 
         },
-        delete: function () {
-
-        }
     }
 })
