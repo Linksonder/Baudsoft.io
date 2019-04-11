@@ -20,6 +20,33 @@ body{
     height: 160px;
 }
 
+
+.logosmall{
+    margin:10px;
+    margin-left:auto; margin-right: auto;
+    height: 60px;
+}
+
+.bingonumber {
+    font-size: 130px;
+    margin-left: 11px;
+    color: #ff7100;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.logobingo {
+    margin-top: 20px;
+}
+table td {
+    width: 100px;
+    height: 100px;
+}
+
+#free, .pickedBG {
+    background-color: #ff7100;
+    }
+
+
 html, body, .container{
     height:100%;
 }
