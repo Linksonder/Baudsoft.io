@@ -1,0 +1,9 @@
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row .btn{
+    margin:5px;
+}
