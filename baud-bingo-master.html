@@ -16,21 +16,21 @@
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
-        .input{
+        .input {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
         }
 
-        .btn{
-            padding:20px 40px;
-            margin:20px;
-            border:1px double white; 
+        .btn {
+            padding: 20px 40px;
+            margin: 20px;
+            border: 1px double white;
         }
 
-        .btn.reset{
-            padding:10px 20px;
+        .btn.reset {
+            padding: 10px 20px;
         }
     </style>
 
@@ -42,7 +42,10 @@
 
         <img class="logo" src="baudsoft.png">
 
-
+        <div class="input">
+            <button class="btn bnt-lg" v-on:click="next">Next</button>
+            <button class="btn bnt-lg reset" v-on:click="next">Reset</button>
+        </div>
         <div class="output">
             <p v-for="m in messages" v-bind:class="m.role">
                 {{m.role}} : {{m.value}}
@@ -51,11 +54,7 @@
                 {{status}} message... please wait
             </p>
         </div>
-        <div class="input">
-            <button class="btn bnt-lg" v-on:click="next">Next</button>
-            <button class="btn bnt-lg reset" v-on:click="next">Reset</button>
 
-        </div>
         <!-- <input class="input"  id="txtInput" 
             v-model="txtInput" maxlength="33" @keyup.enter="send"> -->
 
