@@ -27,8 +27,16 @@ body{
     height: 60px;
 }
 
+.bingonumber {
+    font-size: 130px;
+    margin-left: 11px;
+    color: #ff7100;
+    font-family: 'Press Start 2P', cursive;
+}
 
-
+.logobingo {
+    margin-top: 20px;
+}
 table td {
     width: 100px;
     height: 100px;
